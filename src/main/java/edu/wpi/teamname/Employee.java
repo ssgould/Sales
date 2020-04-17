@@ -20,6 +20,7 @@ public abstract class Employee {
       return true;
     } else {
       for (Client aClient : clients) {
+
         if (aClient.getClientID() < newClient.getClientID()) {
           newClients.add(currentClients.remove(0));
 

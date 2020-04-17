@@ -12,8 +12,7 @@ public class SalesAssociate extends Employee {
 
   // CONSTRUCTOR
 
-  public SalesAssociate(
-      String employeeName, ArrayList<Employee> employees, SalesManager manager, long salesID) {
+  public SalesAssociate(String employeeName, SalesManager manager, long salesID) {
     this.employeeName = "John Doe";
     this.manager = manager;
     this.salesID = salesID;
@@ -50,12 +49,10 @@ public class SalesAssociate extends Employee {
     ArrayList<Client> clients;
     int numberOfClients;
 
-    clients = this.getClients();
+    clients = this.returnClients();
     numberOfClients = clients.size();
-    bonus = numberOfClients*500;
+    bonus = numberOfClients * 500;
 
     return bonus;
   }
-
-
 }

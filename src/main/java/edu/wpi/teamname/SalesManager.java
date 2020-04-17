@@ -60,12 +60,10 @@ public class SalesManager extends Employee {
     ArrayList<Client> clients;
     int numberOfClients;
 
-    clients = this.getClients();
+    clients = this.returnClients();
     numberOfClients = clients.size();
-    bonus = numberOfClients*10000;
+    bonus = numberOfClients * 10000;
 
     return bonus;
   }
-
-
 }

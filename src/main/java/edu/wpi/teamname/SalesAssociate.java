@@ -46,7 +46,7 @@ public class SalesAssociate extends Employee {
     this.salesID = newSalesID;
   }
 
-  private double bonus() {
+  double bonus() {
     double bonus = 0;
     ArrayList<Client> clients;
     int numberOfClients;

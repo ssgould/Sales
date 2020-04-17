@@ -74,6 +74,12 @@ public class SalesManager extends Employee {
     return bonus;
   }
 
+  /**
+   * addEmployee(Employee) | Inserts an employee object into the 'employees' list of this sales
+   * manager
+   *
+   * @param newEmployee This is the new instance of Employee
+   */
   public void addEmployee(Employee newEmployee) {
     this.employees.add(newEmployee);
   }

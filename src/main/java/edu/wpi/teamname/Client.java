@@ -2,7 +2,7 @@ package edu.wpi.teamname;
 
 public class Client {
 
-    private String clientID;
+    private int clientID;
     private String clientName;
     private Employee salesEmployee;
 
@@ -11,28 +11,25 @@ public class Client {
      * @param clientID unique client id
      * @param clientName name of the client
      */
-    public Client(String clientID, String clientName, Employee salesEmployee){
+    public Client(int clientID, String clientName, Employee salesEmployee){
         this.clientID = clientID;
         this.clientName = clientName;
         this.salesEmployee = salesEmployee;
+        salesEmployee.addClient(this);
     }
 
     /**
      *
      * @return client id
      */
-    protected String getClientID() {
+    protected int getClientID() {
         return clientID;
     }
 
-    protected void setClientID(String clientID) {
+    protected void setClientID(int clientID) {
         this.clientID = clientID;
     }
 
-    /**
-     *
-     * @return client name
-     */
     protected String getClientName(){
         return clientName;
     }

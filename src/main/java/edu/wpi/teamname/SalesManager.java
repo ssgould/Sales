@@ -76,28 +76,37 @@ public class SalesManager extends Employee {
     this.employees.add(newEmployee);
   }
 
+  /**
+   * overrides toString function to print as specified in assignment
+   *
+   * @return
+   */
   @Override
   public String toString() {
+
+    // starts with the name
     String returnString = "Sales Manager: " + employeeName + ". ";
 
+    // adds manager if the employee has one
     if (manager != null) {
       returnString += "Sales Manager: " + manager;
     }
-    returnString += "Employees: ";
 
+    // adds list of employees
+    returnString += "Employees: ";
     String employeeString = "";
     for (Employee employee : employees) {
       if (!employeeString.equals("")) employeeString += ", ";
 
       employeeString += employee.getName();
     }
-
     returnString += employeeString;
-    returnString += ". Clients: ";
 
+    // adds list of clients
+    returnString += ". Clients: ";
     String clientString = "";
     for (Client client : clients) {
-      if (!clientString.equals("")) clientString += ", ";
+      if (!clientString.equals("")) clientString += ", "; // inserts commas before 2nd client and on
 
       clientString += client.getClientName() + " " + client.getClientID();
     }

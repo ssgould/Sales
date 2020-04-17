@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 public abstract class Employee {
 
+  protected static String employeeName;
+  protected static SalesManager manager;
+  protected static long salesID;
   protected ArrayList<Client> clients;
   private String name;
 
@@ -20,7 +23,6 @@ public abstract class Employee {
       return true;
     } else {
       for (Client aClient : clients) {
-
         if (aClient.getClientID() < newClient.getClientID()) {
           newClients.add(currentClients.remove(0));
 

@@ -5,27 +5,23 @@ import java.util.ArrayList;
 public class SalesManager extends Employee {
 
   // FIELDS
-
-  protected String employeeName;
   private ArrayList<Employee> employees;
-  protected SalesManager manager;
-  protected long salesID;
 
   // CONSTRUCTOR
 
   public SalesManager(
       String employeeName, ArrayList<Employee> employees, SalesManager manager, long salesID) {
-    this.employeeName = employeeName;
+    Employee.employeeName = employeeName;
     this.setName(employeeName);
     this.employees = new ArrayList<Employee>();
-    this.manager = manager;
-    this.salesID = salesID;
+    Employee.manager = manager;
+    Employee.salesID = salesID;
   }
 
   public SalesManager(String employeeName, ArrayList<Employee> employees, long salesID) {
-    this.employeeName = "John Doe";
+    Employee.employeeName = "John Doe";
     this.employees = new ArrayList<Employee>();
-    this.salesID = salesID;
+    Employee.salesID = salesID;
   }
 
   // METHODS

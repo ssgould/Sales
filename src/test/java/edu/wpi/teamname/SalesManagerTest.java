@@ -33,11 +33,11 @@ class SalesManagerTest {
   @Test
   void getSalesID() {}
 
-  @Test
+  /* @Test
   void testBonus() {
     double bonus = 0;
 
     bonus = emp3.bonus();
     assertEquals(10000, bonus);
-  }
+  }*/
 }

@@ -36,6 +36,10 @@ public abstract class Employee {
        return false;
     }
     private ArrayList<Client> getClients() {
-       return new ArrayList<Client>();
+       return clients;
+    }
+
+    protected ArrayList returnClients(){
+        return this.getClients();
     }
 }

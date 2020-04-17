@@ -6,47 +6,40 @@ public class SalesAssociate extends Employee {
 
   // FIELDS
 
-  protected String employeeName;
-  protected SalesManager manager;
-  protected long salesID;
-
   // CONSTRUCTOR
 
   public SalesAssociate(String employeeName, SalesManager manager, long salesID) {
-    this.employeeName = employeeName;
-    this.manager = manager;
+    super(employeeName, manager, salesID);
     manager.addEmployee(this);
-    this.salesID = salesID;
-    this.setName(employeeName);
   }
 
   // METHODS
 
   public String getEmployeeName() {
-    return this.employeeName;
+    return employeeName;
   }
 
   public void setEmployeeName(String newName) {
-    this.employeeName = newName;
+    employeeName = newName;
   }
 
   public SalesManager getManager() {
-    return this.manager;
+    return manager;
   }
 
   public void setManager(SalesManager newManager) {
-    this.manager = newManager;
+    manager = newManager;
   }
 
   public long getSalesID() {
-    return this.salesID;
+    return Employee.salesID;
   }
 
   public void setSalesID(long newSalesID) {
-    this.salesID = newSalesID;
+    Employee.salesID = newSalesID;
   }
 
-  private double bonus() {
+  double bonus() {
     double bonus = 0;
     ArrayList<Client> clients;
     int numberOfClients;

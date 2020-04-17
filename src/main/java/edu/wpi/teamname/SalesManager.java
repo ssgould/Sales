@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class SalesManager extends Employee {
 
   // FIELDS
-
   private ArrayList<Employee> employees;
 
   // CONSTRUCTOR
@@ -13,6 +12,11 @@ public class SalesManager extends Employee {
   public SalesManager(
       String employeeName, ArrayList<Employee> employees, SalesManager manager, long salesID) {
     super(employeeName, manager, salesID);
+    this.employees = employees;
+  }
+
+  public SalesManager(String employeeName, ArrayList<Employee> employees, long salesID) {
+    super(employeeName, null, salesID);
     this.employees = new ArrayList<Employee>();
   }
 
@@ -50,7 +54,7 @@ public class SalesManager extends Employee {
     this.salesID = newSalesID;
   }
 
-  private double bonus() {
+  public double bonus() {
     double bonus = 0;
     ArrayList<Client> clients;
     int numberOfClients;
@@ -62,6 +66,12 @@ public class SalesManager extends Employee {
     return bonus;
   }
 
+  /**
+   * addEmployee(Employee) | Inserts an employee object into the 'employees' list of this sales
+   * manager
+   *
+   * @param newEmployee This is the new instance of Employee
+   */
   public void addEmployee(Employee newEmployee) {
     this.employees.add(newEmployee);
   }

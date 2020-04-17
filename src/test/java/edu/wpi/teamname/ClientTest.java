@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Test;
 
 public class ClientTest {
 
+  @Test
+  public void alwaysPass() {}
+
   SalesManager managerKaren = new SalesManager("Karen", new ArrayList<Employee>(), null, 123);
   SalesAssociate associateBill = new SalesAssociate("Bill", managerKaren, 233);
   Client amyClient = new Client(2, "Amy", associateBill);

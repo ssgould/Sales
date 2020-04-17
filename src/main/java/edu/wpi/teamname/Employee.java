@@ -4,11 +4,10 @@ import java.util.ArrayList;
 
 public abstract class Employee {
 
+  protected static String employeeName;
+  protected static SalesManager manager;
+  protected static long salesID;
   protected ArrayList<Client> clients;
-  protected String employeeName;
-  protected SalesManager manager;
-  protected long salesID;
-  private String name;
 
   public Employee(String employeeName, SalesManager manager, long salesID) {
     clients = new ArrayList<Client>();
@@ -57,11 +56,11 @@ public abstract class Employee {
   }
 
   public String getName() {
-    return name;
+    return employeeName;
   }
 
   public void setName(String name) {
-    this.name = name;
+    this.employeeName = name;
   }
 
   protected ArrayList returnClients() {

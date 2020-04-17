@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 public abstract class Employee {
 
-  private ArrayList<Client> clients;
+  protected ArrayList<Client> clients;
+  private String name;
 
   public Employee() {
     clients = new ArrayList<Client>();
@@ -21,10 +22,11 @@ public abstract class Employee {
       for (Client aClient : clients) {
         if (aClient.getClientID() < newClient.getClientID()) {
           newClients.add(currentClients.remove(0));
+
         } else if (aClient.getClientID() == newClient.getClientID()) {
           return false;
-        }
-        {
+
+        } else {
           newClients.add(newClient);
           newClients.addAll(currentClients);
           clients.clear();
@@ -38,6 +40,14 @@ public abstract class Employee {
 
   private ArrayList<Client> getClients() {
     return clients;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 
   protected ArrayList returnClients() {

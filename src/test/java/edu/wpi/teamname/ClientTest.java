@@ -23,21 +23,4 @@ public class ClientTest {
     assertEquals(expectedOutput, associateBill.returnClients());
   }
 
-  @Test
-  void getClientID() {}
-
-  @Test
-  void setClientID() {}
-
-  @Test
-  void getClientName() {}
-
-  @Test
-  void setClientName() {}
-
-  @Test
-  void getSalesEmployee() {}
-
-  @Test
-  void setSalesEmployee() {}
 }

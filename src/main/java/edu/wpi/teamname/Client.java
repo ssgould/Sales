@@ -47,4 +47,9 @@ public class Client {
   private double totalSales() {
     return 0;
   }
+
+  @Override
+  public String toString() {
+    return "Client: " + clientName +" Sales Employee: " + salesEmployee;
+  }
 }

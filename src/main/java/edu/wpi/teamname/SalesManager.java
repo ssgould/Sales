@@ -82,12 +82,22 @@ public class SalesManager extends Employee {
 
   @Override
   public String toString() {
-    String returnString = "Sales Associate: " + employeeName + ". ";
+    String returnString = "Sales Manager: " + employeeName + ". ";
 
     if (manager != null) {
       returnString += "Sales Manager: " + manager;
     }
-    returnString += "Clients: ";
+    returnString += "Employees: ";
+
+    String employeeString = "";
+    for (Employee employee : employees) {
+      if (!employeeString.equals("")) employeeString += ", ";
+
+      employeeString += employee.getName();
+    }
+
+    returnString += employeeString;
+    returnString += ". Clients: ";
 
     String clientString = "";
     for (Client client : clients) {

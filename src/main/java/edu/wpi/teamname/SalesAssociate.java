@@ -61,7 +61,7 @@ public class SalesAssociate extends Employee {
             + employeeName
             + ". Sales Manager: "
             + manager.getEmployeeName()
-            + " Clients: ";
+            + ". Clients: ";
 
     String clientString = "";
     for (Client client : clients) {

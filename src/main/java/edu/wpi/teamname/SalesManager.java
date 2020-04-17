@@ -20,8 +20,8 @@ public class SalesManager extends Employee {
     this.manager = manager;
     this.salesID = salesID;
   }
-  public SalesManager(
-          String employeeName, ArrayList<Employee> employees, long salesID) {
+
+  public SalesManager(String employeeName, ArrayList<Employee> employees, long salesID) {
     this.employeeName = "John Doe";
     this.employees = new ArrayList<Employee>();
     this.salesID = salesID;

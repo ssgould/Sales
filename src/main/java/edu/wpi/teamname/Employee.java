@@ -6,6 +6,10 @@ public abstract class Employee {
 
   private ArrayList<Client> clients;
 
+  public Employee() {
+    clients = new ArrayList<Client>();
+  }
+
   public boolean addClient(Client newClient) {
     ArrayList<Client> currentClients = this.clients;
     ArrayList<Client> newClients = new ArrayList<Client>();

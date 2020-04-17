@@ -1,4 +1,4 @@
 package edu.wpi.teamname;
 
-public class SalesAssociate {
+public class SalesAssociate extends Employee {
 }

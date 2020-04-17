@@ -1,4 +1,4 @@
 package edu.wpi.teamname;
 
-public class Employee {
+public abstract class Employee {
 }

@@ -40,6 +40,6 @@ public abstract class Employee {
     }
 
     protected ArrayList returnClients(){
-        returnClients() this.getClients();
+        return this.getClients();
     }
 }

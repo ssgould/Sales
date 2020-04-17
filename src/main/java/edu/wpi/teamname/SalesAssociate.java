@@ -13,10 +13,11 @@ public class SalesAssociate extends Employee {
   // CONSTRUCTOR
 
   public SalesAssociate(String employeeName, SalesManager manager, long salesID) {
-    this.employeeName = "John Doe";
+    this.employeeName = employeeName;
     this.manager = manager;
     manager.addEmployee(this);
     this.salesID = salesID;
+    this.setName(employeeName);
   }
 
   // METHODS
@@ -57,22 +58,24 @@ public class SalesAssociate extends Employee {
     return bonus;
   }
 
-  /*
   @Override
   public String toString() {
-    String returnString = "Sales Associate: " + employeeName + ". Sales Manager: " + manager +
-            "Clients: ";
+    String returnString =
+        "Sales Associate: "
+            + employeeName
+            + ". Sales Manager: "
+            + manager.getEmployeeName()
+            + " Clients: ";
 
     String clientString = "";
-    for(Client client: clients)
-    {
-      if (!clientString.equals(""))
-        clientString += ", ";
-
+    for (Client client : clients) {
+      if (!clientString.equals("")) clientString += ", ";
 
       clientString += client.getClientName() + " " + client.getClientID();
     }
+
+    returnString += clientString;
+
+    return returnString;
   }
-  */
-   */
 }

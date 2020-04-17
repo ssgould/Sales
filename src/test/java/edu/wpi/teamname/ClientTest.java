@@ -22,5 +22,4 @@ public class ClientTest {
 
     assertEquals(expectedOutput, associateBill.returnClients());
   }
-
 }

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public abstract class Employee {
 
   protected ArrayList<Client> clients;
+  private String name;
 
   public Employee() {
     clients = new ArrayList<Client>();
@@ -39,6 +40,14 @@ public abstract class Employee {
 
   private ArrayList<Client> getClients() {
     return clients;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 
   protected ArrayList returnClients() {

@@ -15,7 +15,8 @@ public class SalesManager extends Employee {
 
   public SalesManager(
       String employeeName, ArrayList<Employee> employees, SalesManager manager, long salesID) {
-    this.employeeName = "John Doe";
+    this.employeeName = employeeName;
+    this.setName(employeeName);
     this.employees = new ArrayList<Employee>();
     this.manager = manager;
     this.salesID = salesID;
@@ -67,8 +68,28 @@ public class SalesManager extends Employee {
     return bonus;
   }
 
-
   public void addEmployee(Employee newEmployee) {
     this.employees.add(newEmployee);
+  }
+
+  @Override
+  public String toString() {
+    String returnString = "Sales Associate: " + employeeName + ". ";
+
+    if (manager != null) {
+      returnString += "Sales Manager: " + manager;
+    }
+    returnString += "Clients: ";
+
+    String clientString = "";
+    for (Client client : clients) {
+      if (!clientString.equals("")) clientString += ", ";
+
+      clientString += client.getClientName() + " " + client.getClientID();
+    }
+
+    returnString += clientString;
+
+    return returnString;
   }
 }

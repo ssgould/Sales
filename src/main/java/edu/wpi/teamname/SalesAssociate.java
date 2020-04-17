@@ -15,6 +15,7 @@ public class SalesAssociate extends Employee {
   public SalesAssociate(String employeeName, SalesManager manager, long salesID) {
     this.employeeName = "John Doe";
     this.manager = manager;
+    manager.addEmployee(this);
     this.salesID = salesID;
   }
 
@@ -55,4 +56,23 @@ public class SalesAssociate extends Employee {
 
     return bonus;
   }
+
+  /*
+  @Override
+  public String toString() {
+    String returnString = "Sales Associate: " + employeeName + ". Sales Manager: " + manager +
+            "Clients: ";
+
+    String clientString = "";
+    for(Client client: clients)
+    {
+      if (!clientString.equals(""))
+        clientString += ", ";
+
+
+      clientString += client.getClientName() + " " + client.getClientID();
+    }
+  }
+  */
+   */
 }

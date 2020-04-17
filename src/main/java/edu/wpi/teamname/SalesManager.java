@@ -66,4 +66,9 @@ public class SalesManager extends Employee {
 
     return bonus;
   }
+
+
+  public void addEmployee(Employee newEmployee) {
+    this.employees.add(newEmployee);
+  }
 }

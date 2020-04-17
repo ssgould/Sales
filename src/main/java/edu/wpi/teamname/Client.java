@@ -24,18 +24,32 @@ public class Client {
     return clientID;
   }
 
+  /**
+   * sets the id of the client
+   * @param clientID new id value
+   */
   protected void setClientID(int clientID) {
     this.clientID = clientID;
   }
 
+  /**
+   * @return client name
+   */
   protected String getClientName() {
     return clientName;
   }
 
+  /**
+   * sets clients name to new value
+   * @param clientName new name value
+   */
   protected void setClientName(String clientName) {
     this.clientName = clientName;
   }
 
+  /**
+   * @return the sales employee associated with the client
+   */
   protected Employee getSalesEmployee() {
     return salesEmployee;
   }

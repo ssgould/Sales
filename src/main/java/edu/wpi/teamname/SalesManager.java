@@ -6,20 +6,14 @@ public class SalesManager extends Employee {
 
   // FIELDS
 
-  protected String employeeName;
   private ArrayList<Employee> employees;
-  protected SalesManager manager;
-  protected long salesID;
 
   // CONSTRUCTOR
 
   public SalesManager(
       String employeeName, ArrayList<Employee> employees, SalesManager manager, long salesID) {
-    this.employeeName = employeeName;
-    this.setName(employeeName);
+    super(employeeName, manager, salesID);
     this.employees = new ArrayList<Employee>();
-    this.manager = manager;
-    this.salesID = salesID;
   }
 
   // METHODS

@@ -32,11 +32,11 @@ public class SalesAssociate extends Employee {
   }
 
   public long getSalesID() {
-    return Employee.salesID;
+    return this.salesID;
   }
 
   public void setSalesID(long newSalesID) {
-    Employee.salesID = newSalesID;
+    this.salesID = newSalesID;
   }
 
   double bonus() {

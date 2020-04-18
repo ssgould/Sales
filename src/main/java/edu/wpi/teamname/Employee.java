@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public abstract class Employee {
 
-  protected static String employeeName;
-  protected static SalesManager manager;
-  protected static long salesID;
+  protected String employeeName;
+  protected SalesManager manager;
+  protected long salesID;
   protected ArrayList<Client> clients;
 
   public Employee(String employeeName, SalesManager manager, long salesID) {

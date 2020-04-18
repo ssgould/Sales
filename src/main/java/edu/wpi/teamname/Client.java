@@ -62,6 +62,6 @@ public class Client {
 
   @Override
   public String toString() {
-    return "Client: " + clientName + " Sales Employee: " + salesEmployee.getName();
+    return "Client: " + clientName + ". Sales Employee: " + salesEmployee.getName();
   }
 }

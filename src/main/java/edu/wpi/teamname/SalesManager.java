@@ -89,7 +89,7 @@ public class SalesManager extends Employee {
 
     // adds manager if the employee has one
     if (manager != null) {
-      returnString += "Sales Manager: " + manager;
+      returnString += "Sales Manager: " + manager.getEmployeeName();
     }
 
     // adds list of employees

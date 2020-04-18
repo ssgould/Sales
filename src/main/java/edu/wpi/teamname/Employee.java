@@ -21,7 +21,7 @@ public abstract class Employee {
    * order by client id
    *
    * @param newClient client to be added to the client list
-   * @return
+   * @return true of it worked, false if it didn't
    */
   public boolean addClient(Client newClient) {
     ArrayList<Client> currentClients = this.clients;
